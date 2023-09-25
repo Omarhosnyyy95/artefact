@@ -40,7 +40,6 @@ The goal of this project is to:
 
 ### Security considerations within the project
 - AWS VPC Configuration
-    - 
     - CIDR: 10.0.0.0/16
 - AWS Subnet configuration
     - Only 1 Subnet created to allocate 256 IP addresses.
@@ -90,5 +89,5 @@ The goal of this project is to:
     - `scrapy crawl australia`
 
 # Future solution enhancements
-- Build a docker image to the scraping application to enhance application portability. A sample Dockerfile is left in the repo as a blueprint.
+- Build a docker image from the scraping application to enhance application portability.
 - Develop a serverless YAML file to automate infrastructure deployment on AWS.
