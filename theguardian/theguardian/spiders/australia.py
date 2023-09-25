@@ -1,5 +1,11 @@
 import scrapy
 
+# A limitation (or a bug) on pages pagination on the website:
+    # 1) Navigate to page 1900: https://www.theguardian.com/australia-news/all?page=1900
+    # 2) Scroll down then click next to go to the next page
+    # 3) You will be re-directed to the main page again https://www.theguardian.com/australia-news
+MAX_PAGES = 1900
+
 class AustraliaSpider(scrapy.Spider):
     name = "australia"
     allowed_domains = ["www.theguardian.com"]
@@ -19,6 +25,7 @@ class AustraliaSpider(scrapy.Spider):
             }
         )
 
+    
     def page(self, response):
         page_no = response.meta["page_no"]
         articles = response.xpath("//div[@class='u-cf index-page']/section/div/div//div[contains(@class, 'fc-item ')]")
@@ -34,7 +41,7 @@ class AustraliaSpider(scrapy.Spider):
                 }
         )
 
-        while page_no <= 1900:
+        while page_no <= MAX_PAGES:
             page_no +=1
             yield scrapy.Request(
                 url=f'https://www.theguardian.com/australia-news/all?page={page_no}',
