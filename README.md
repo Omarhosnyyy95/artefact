@@ -1,3 +1,7 @@
+```diff
+- MongoDB Cluster is currently paused, so no reads or writes are working on the cluster.
+- Kindly, contact omarhosnyyy95@gmail.com to resume the cluster before using the API 
+```
 # Project Description
 The goal of this project is to:
 - Develop a web scraping application that scrapes Australia news articles from theguardian website (https://www.theguardian.com/australia-news/all) and store the result in a MongoDB collection hosted in Atlas.
