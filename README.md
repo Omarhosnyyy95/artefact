@@ -1,7 +1,8 @@
-```diff
-- MongoDB Cluster is currently paused, so no reads or writes are working on the cluster.
-- Kindly, contact omarhosnyyy95@gmail.com to resume the cluster before using the API 
-```
+[comment]: <> (
+    ```diff 
+    - MongoDB Cluster is currently paused, so no reads or writes are working on the cluster. 
+    - Kindlycontact omarhosnyyy95@gmail.com to resume the cluster before using the API 
+    ```) 
 # Project Description
 The goal of this project is to:
 - Develop a web scraping application that scrapes Australia news articles from theguardian website (https://www.theguardian.com/australia-news/all) and store the result in a MongoDB collection hosted in Atlas.
@@ -34,7 +35,7 @@ The goal of this project is to:
 4) VPC Peering on AWS:
     - To allow connection between the isolated Atlas cluster and the AWS Lambda function running inside an isolated VPC on AWS
 5) A Lambda function on AWS inside a VPC
-    - fetches the data from 
+    - fetches the data from the MongoDB collection
 6) API Gateway
     - Exposes a public end-point for users to access the database
     - Triggers the Lambda function
